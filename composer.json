@@ -1,0 +1,41 @@
+{
+  "name":              "shae/idp-client",
+  "description":       "",
+  "type":              "project",
+  "authors":           [
+    {
+      "name":  "Eugene Shae",
+      "email": "evgeniy.shemena@gmail.com"
+    }
+  ],
+  "license":           "Apache-2.0",
+  "minimum-stability": "stable",
+  "require":           {
+    "php":                     "^7.2",
+    "ext-json":                "*",
+    "laravel/lumen-framework": "^6.0",
+    "lcobucci/jwt":            "^3.3"
+  },
+  "autoload":          {
+    "psr-4": {
+      "Shae\\IdentityProviderClient\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev":      {
+    "psr-4": {
+    }
+  },
+  "extra":             {
+    "laravel": {
+      "providers": [
+        "Shae\\IdentityProviderClient\\IDPClientServiceProvider"
+      ],
+      "aliases":   {
+        "PackageBuilder": "Shae\\IdentityProviderClient\\IDPClientFacade"
+      }
+    }
+  }
+}
